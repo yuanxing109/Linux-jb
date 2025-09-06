@@ -5,12 +5,12 @@
 ## 📦 包含内容
 
 ### 系统安装脚本
-- **安装 CasaOS** - 轻量级家庭云系统
-  ```bash
-  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/install_casaos.sh | bash
 - **安装 Docker** - 容器化平台
   ```bash
   apt-get install docker.io
+- **安装 CasaOS** - 轻量级家庭云系统
+  ```bash
+  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/casaos-install.sh | bash
 - **一键换源** - 快速更换国内软件源
   ```bash
   bash <(curl -sSL https://linuxmirrors.cn/main.sh)
@@ -33,7 +33,7 @@
 
 - **OpenList** - 多存储文件列表程序
   ```bash
-  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/install_openlist.sh | bash
+  docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" xiguanle/openlist:latest
 
 ### 工具脚本
 - **Cpolar推送** - 自动推送URL到push
