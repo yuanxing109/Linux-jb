@@ -5,15 +5,15 @@
 ## 📦 包含内容
 
 ### 系统安装脚本
+- **一键换源** - 快速更换国内软件源
+  ```bash
+  bash <(curl -sSL https://linuxmirrors.cn/main.sh)
 - **安装 Docker** - 容器化平台
   ```bash
   apt-get install docker.io
 - **安装 CasaOS** - 轻量级家庭云系统
   ```bash
   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/casaos-install.sh | bash
-- **一键换源** - 快速更换国内软件源
-  ```bash
-  bash <(curl -sSL https://linuxmirrors.cn/main.sh)
 
 ### 应用部署脚本
 - **青龙面板** - 定时任务管理
@@ -33,8 +33,7 @@
 
 - **OpenList** - 多存储文件列表程序
   ```bash
-  docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" xiguanle/openlist:latest
-
+   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/OpenList_install.sh | bash
 ### 工具脚本
 - **Cpolar推送** - 自动推送URL到push
 - **项目地址** - ：https://github.com/Hoper-J/cpolar-connect
