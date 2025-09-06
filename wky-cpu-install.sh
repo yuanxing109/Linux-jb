@@ -69,7 +69,7 @@ setup_cpu_control_script() {
     mkdir -p /usr/sbin/
     
     # 下载脚本
-    if wget -O /usr/sbin/cpu-control.sh https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/cpu-control.sh; then
+    if wget -O /usr/sbin/cpu-control.sh https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/cpu-control.sh; then
         log_info "成功下载 CPU 控制脚本"
     else
         log_error "下载 CPU 控制脚本失败"
