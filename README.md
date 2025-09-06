@@ -37,9 +37,26 @@
 
 ### 工具脚本
 - **Cpolar推送** - 自动推送URL到push
+  项目地址：https://github.com/Hoper-J/cpolar-connect
   ```bash
-  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/cpolar_push.sh | bash
-
+  # 使用官方安装脚本
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  
+  # 或安装到系统
+  uv tool install cpolar-connect
+  
+  # 1. 安装 cpolar
+  curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo bash
+  
+  # 2. 配置认证（需要先注册 cpolar 账号）
+  cpolar authtoken YOUR_TOKEN
+  
+  # 3. 设置开机自启
+  sudo systemctl enable cpolar
+  sudo systemctl start cpolar
+  
+  # 4. 查看用户名（客户端配置需要）
+  whoami
 ## 🚀 快速开始
 
 ### 前提条件
