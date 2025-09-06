@@ -37,7 +37,7 @@
 
 ### 工具脚本
 - **Cpolar推送** - 自动推送URL到push
-  项目地址：https://github.com/Hoper-J/cpolar-connect
+- **项目地址** - ：https://github.com/Hoper-J/cpolar-connect
   ```bash
   # 使用官方安装脚本
   curl -LsSf https://astral.sh/uv/install.sh | sh
