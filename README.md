@@ -35,6 +35,9 @@
   ```bash
    curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/OpenList_install.sh | bash
 ### 工具脚本
+- **CPU监控** - 根据温度调整CPU频率（防止死机）
+  ```bash
+  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/wky-cpu-install.sh | bash
 - **Cpolar推送** - 自动推送URL到push
 - **项目地址** - ：https://github.com/Hoper-J/cpolar-connect
   ```bash
