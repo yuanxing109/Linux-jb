@@ -10,7 +10,7 @@
   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/install_casaos.sh | bash
 - **安装 Docker** - 容器化平台
   ```bash
-  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/install_docker.sh | bash
+  apt-get install docker.io
 - **一键换源** - 快速更换国内软件源
   ```bash
   bash <(curl -sSL https://linuxmirrors.cn/main.sh)
@@ -18,7 +18,19 @@
 ### 应用部署脚本
 - **青龙面板** - 定时任务管理
   ```bash
-  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/install_qinglong.sh | bash
+  docker run -dit \
+  -v $PWD/ql/config:/ql/config \
+  -v $PWD/ql/log:/ql/log \
+  -v $PWD/ql/db:/ql/db \
+  -v $PWD/ql/repo:/ql/repo \
+  -v $PWD/ql/raw:/ql/raw \
+  -v $PWD/ql/scripts:/ql/scripts \
+  -p 5700:5700 \
+  --name qinglong \
+  --hostname qinglong \
+  --restart unless-stopped \
+  whyour/qinglong:2.10.13
+
 - **OpenList** - 多存储文件列表程序
   ```bash
   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/install_openlist.sh | bash
