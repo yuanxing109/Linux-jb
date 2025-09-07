@@ -38,6 +38,17 @@
 - *WIFI配置* - 玩客云 免驱无线网卡 终端配网
   ```bash
   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/connect_wifi.sh | bash
+
+  chmod +x connect_wifi.sh
+  #实现开机自动连接到已经配置的wifi
+  #打开interfaces文件，内容如下：
+  sudo vim /etc/network/interfaces
+  #然后在最后添加内容：
+  auto wlan0
+  iface wlan0 inet dhcp
+      wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+  #重启网络服务
+  sudo systemctl restart networking
 ## 🚀 快速开始
 
 ### 前提条件
