@@ -40,7 +40,7 @@
   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/wky-cpu-install.sh | bash
 - *WIFI配置* - 玩客云 免驱无线网卡 终端配网
   ```bash
-  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/refs/heads/main/scripts/connect_wifi.sh | bash
+  curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/connect_wifi.sh | bash
 ## 🚀 快速开始
 
 ### 前提条件
