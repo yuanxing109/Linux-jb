@@ -31,9 +31,6 @@
   --restart unless-stopped \
   whyour/qinglong:2.10.13
 
-- **OpenList** - 多存储文件列表程序
-  ```bash
-   curl -sSL https://raw.githubusercontent.com/yuanxing109/WKY-Scripts/main/scripts/OpenList_install.sh | bash
 ### 工具脚本
 - **CPU监控** - 根据温度调整CPU频率（防止死机）
   ```bash
